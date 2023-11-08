@@ -1,4 +1,4 @@
-# Ex02 Django ORM Web Application
+# Ex 02 Django ORM Web Application
 ## Date: 10-10-23
 
 ## AIM
@@ -25,29 +25,28 @@ Models.py
 
 from django.db import models
 from django.contrib import admin
-class Employee (models.Model):
-    eid=models.CharField(max_length=20,help_text="Employee ID")
+class Players(models.Model):
+    jrsy=models.CharField(max_length=20,help_text="Player Jrsy")
     name=models.CharField(max_length=100)
-    salary=models.IntegerField()
+    cntry=models.CharField(max_length=100)
     age=models.IntegerField()
-    email=models.EmailField()
+    height=models.IntegerField()
 
 class EmployeeAdmin(admin.ModelAdmin):
-    list_display=('eid','name','salary','age','email')
+    list_display=('jrsy','name','cntry','age','height')
+
 
 Admin.py
 
 from django.contrib import admin
-from .models import Employee,EmployeeAdmin
-admin.site.register(Employee,EmployeeAdmin)
+from .models import Players,EmployeeAdmin
+admin.site.register(Players,EmployeeAdmin)
 ```
 
 ## OUTPUT
 
-![image](https://github.com/knight7080/ORM/assets/88542035/c129ddc2-7e69-4597-bc70-8fa5adb767e5)
-
-![image](https://github.com/knight7080/ORM/assets/88542035/251b497c-3acd-4c68-b006-c8275e11f4a6)
-
+![image](https://github.com/rahulramakrishnann/Exp-2-ORM--web/assets/143045415/b2e404af-f088-492e-b606-6ebffece8f02)
+![image](https://github.com/rahulramakrishnann/Exp-2-ORM--web/assets/143045415/94c3d887-112e-4b9b-b83a-7365148fb61f)
 
 
 ## RESULT
